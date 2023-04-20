@@ -235,8 +235,8 @@ mac_clear(struct sshmac *mac)
 			umac128_delete(mac->umac_ctx);
 	} else if (mac->hmac_ctx != NULL)
 		ssh_hmac_free(mac->hmac_ctx);
-	mac->umac_ctx = NULL;
 	mac->hmac_ctx = NULL;
+	mac->umac_ctx = NULL;
 }
 
 /* XXX copied from ciphers_valid */
